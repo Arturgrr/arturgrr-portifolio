@@ -18,15 +18,15 @@ export function Hero() {
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
 
-      <div className="relative z-10 grid w-full max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-2 md:px-10">
-        <div className="flex flex-col items-start justify-center">
+      <div className="relative z-10 grid w-[80vw] max-w-[1100px] grid-cols-1 gap-10 md:[grid-template-columns:3fr_2fr]">
+        <div className="flex flex-col items-start justify-center md:pr-6">
           <h1 className="text-4xl leading-tight tracking-tight md:text-5xl lg:text-6xl">
             Olá 👋 eu sou Artur
           </h1>
           <p className="mt-3 text-xl md:text-2xl">
             💻 Desenvolvedor{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-emerald-400 bg-clip-text text-transparent">
-              full-stack
+              Full-Stack
             </span>
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-4 opacity-80">
@@ -39,8 +39,8 @@ export function Hero() {
             <Image
               src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/go.svg"
               alt="Go"
-              width={30}
-              height={30}
+              width={32}
+              height={32}
             />
             <Image
               src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/java.svg"
@@ -68,7 +68,7 @@ export function Hero() {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center md:translate-x-6">
+        <div className="flex items-center justify-end">
           <div
             className={cn(
               "h-56 w-56 rounded-2xl bg-white md:h-72 md:w-72",

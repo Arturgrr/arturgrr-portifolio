@@ -1,4 +1,7 @@
-import "./globals.css"
+import { Sora } from "next/font/google";
+import "./globals.css";
+
+const sora = Sora({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -6,10 +9,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
+    <html lang="en" className={sora.className}>
+      <body>{children}</body>
     </html>
   );
 }

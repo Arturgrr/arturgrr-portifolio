@@ -62,12 +62,21 @@ export function Hero() {
         <div className="flex items-center justify-center lg:justify-end">
           <div
             className={cn(
-              "h-48 w-48 rounded-2xl bg-white sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72",
+              "relative h-48 w-48 overflow-hidden rounded-2xl bg-white sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72",
               "border border-black/5 shadow-2xl",
               "[box-shadow:inset_0_0_40px_rgba(0,0,0,0.08)]",
               "[box-shadow:0_20px_60px_rgba(0,0,0,0.25)]",
             )}
-          />
+          >
+            <Image
+              src="/fotos/Artur.png"
+              alt="Foto de Artur Assis Guerra"
+              fill
+              priority
+              className="rounded-2xl object-cover"
+              sizes="(max-width: 1024px) 16rem, 18rem"
+            />
+          </div>
         </div>
       </div>
     </section>

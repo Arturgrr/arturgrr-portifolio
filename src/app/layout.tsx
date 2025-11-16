@@ -5,6 +5,9 @@ const sora = Sora({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Artur Guerra - Desenvolvedor Backend",
+  icons: {
+    icon: "/icons/favicon.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ShimmerButton } from "../ui/shimmer-button";
@@ -13,11 +14,19 @@ interface NavBarProps {
 
 export function NavBar({ active = "sobre" }: NavBarProps) {
   const [open, setOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const onDocClick = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         setOpen(false);
+      }
+      if (
+        contactRef.current &&
+        !contactRef.current.contains(e.target as Node)
+      ) {
+        setContactOpen(false);
       }
     };
     document.addEventListener("click", onDocClick);
@@ -39,6 +48,14 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
             href="/"
             className="text-base font-semibold text-black md:text-lg"
           >
+            <Image
+              src="/icons/favicon.png"
+              alt="Artur Guerra logo"
+              width={28}
+              height={28}
+              className="inline mr-2 align-middle"
+              priority
+            />
             /arturgrr
           </Link>
         </div>
@@ -114,23 +131,107 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
                 >
                   Blog
                 </Link>
-                <Link
-                  href="/contato"
-                  className="block rounded-lg px-3 py-2 text-black/80 hover:bg-black/5"
-                  onClick={() => setOpen(false)}
+                <div className="my-1 h-px w-full bg-black/10" />
+                <a
+                  href="https://www.linkedin.com/in/arturgrr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 rounded-md px-3 py-2 text-black/80 hover:bg-black/5"
                 >
-                  Contato
-                </Link>
+                  <Image
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    width={16}
+                    height={16}
+                  />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/arturgrr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-1 flex items-center gap-2 rounded-md px-3 py-2 text-black/80 hover:bg-black/5"
+                >
+                  <Image
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
+                    alt="GitHub"
+                    width={16}
+                    height={16}
+                  />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="mailto:arturassisguerra@gmail.com"
+                  className="mt-1 flex items-center gap-2 rounded-md px-3 py-2 text-black/80 hover:bg-black/5"
+                >
+                  <Image
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg"
+                    alt="Email"
+                    width={16}
+                    height={16}
+                  />
+                  <span className="whitespace-nowrap">Email</span>
+                </a>
               </div>
             ) : null}
           </div>
-          <Link href="/contato" className="hidden lg:inline-flex">
-            <ShimmerButton className="shadow-2xl cursor-none">
-              <span className="text-center text-sm font-medium leading-none tracking-tight text-white">
-                Entrar em contato
-              </span>
-            </ShimmerButton>
-          </Link>
+          <div className="relative hidden lg:block" ref={contactRef}>
+            <button
+              type="button"
+              onClick={() => setContactOpen((v) => !v)}
+              className="rounded-full"
+            >
+              <ShimmerButton className="shadow-2xl">
+                <span className="text-center text-sm font-medium leading-none tracking-tight text-white">
+                  Entrar em contato
+                </span>
+              </ShimmerButton>
+            </button>
+            {contactOpen ? (
+              <div className="absolute right-0 mt-2 w-64 overflow-hidden rounded-xl border border-black/10 bg-white/90 p-2 text-sm shadow-xl backdrop-blur-md">
+                <a
+                  href="https://github.com/arturgrr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 rounded-lg px-3 py-2 text-black/80 hover:bg-black/5"
+                >
+                  <Image
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
+                    alt="GitHub"
+                    width={18}
+                    height={18}
+                  />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/arturgrr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-1 flex items-center gap-2 rounded-lg px-3 py-2 text-black/80 hover:bg-black/5"
+                >
+                  <Image
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    width={18}
+                    height={18}
+                  />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="mailto:arturassisguerra@gmail.com"
+                  className="mt-1 flex items-center gap-2 rounded-lg px-3 py-2 text-black/80 hover:bg-black/5"
+                >
+                  <Image
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg"
+                    alt="Email"
+                    width={18}
+                    height={18}
+                  />
+                  <span className="whitespace-nowrap">Email</span>
+                </a>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>

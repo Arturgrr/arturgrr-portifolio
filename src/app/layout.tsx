@@ -3,6 +3,10 @@ import "./globals.css";
 
 const sora = Sora({ subsets: ["latin"] });
 
+export const metadata = {
+  title: "Artur Guerra - Desenvolvedor Backend",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

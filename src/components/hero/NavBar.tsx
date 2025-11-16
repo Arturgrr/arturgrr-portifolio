@@ -24,9 +24,9 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
     return () => document.removeEventListener("click", onDocClick);
   }, []);
   return (
-    <div className="pointer-events-none fixed left-1/2 top-6 z-50 -translate-x-1/2">
+    <div className="fixed left-1/2 top-6 z-50 -translate-x-1/2">
       <div
-        className="pointer-events-auto mx-auto grid w-[70vw] max-w-[980px] grid-cols-3 items-center rounded-full border border-white/40 bg-white/20 px-4 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl"
+        className="mx-auto grid w-[70vw] max-w-[980px] grid-cols-3 items-center rounded-full border border-white/40 bg-white/20 px-4 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl"
         style={{
           WebkitBackdropFilter: "blur(18px)",
           backdropFilter: "blur(18px)",
@@ -46,7 +46,7 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
           <Link
             href="/#sobre"
             aria-current={active === "sobre" ? "page" : undefined}
-            className={`rounded-full px-3 py-1.5 text-sm transition-colors whitespace-nowrap ${
+            className={`cursor-none rounded-full px-3 py-1.5 text-sm transition-colors whitespace-nowrap ${
               active === "sobre"
                 ? "bg-black/10 text-black"
                 : "text-black/80 hover:bg-black/10"
@@ -57,7 +57,7 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
           <Link
             href="/projetos"
             aria-current={active === "projetos" ? "page" : undefined}
-            className={`rounded-full px-3 py-1.5 text-sm transition-colors whitespace-nowrap ${
+            className={`cursor-none rounded-full px-3 py-1.5 text-sm transition-colors whitespace-nowrap ${
               active === "projetos"
                 ? "bg-black/10 text-black"
                 : "text-black/80 hover:bg-black/10"
@@ -68,7 +68,7 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
           <Link
             href="/blog"
             aria-current={active === "blog" ? "page" : undefined}
-            className={`rounded-full px-3 py-1.5 text-sm transition-colors whitespace-nowrap ${
+            className={`cursor-none rounded-full px-3 py-1.5 text-sm transition-colors whitespace-nowrap ${
               active === "blog"
                 ? "bg-black/10 text-black"
                 : "text-black/80 hover:bg-black/10"
@@ -125,7 +125,7 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
             ) : null}
           </div>
           <Link href="/contato" className="hidden lg:inline-flex">
-            <ShimmerButton className="shadow-2xl">
+            <ShimmerButton className="shadow-2xl cursor-none">
               <span className="text-center text-sm font-medium leading-none tracking-tight text-white">
                 Entrar em contato
               </span>

@@ -6,7 +6,10 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative flex h-[66vh] w-full items-center justify-center overflow-hidden bg-background">
+    <section
+      id="hero"
+      className="relative flex h-[66vh] w-full items-center justify-center overflow-hidden bg-background"
+    >
       <InteractiveGridPattern
         preserveAspectRatio="none"
         squares={[48, 48]}

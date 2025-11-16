@@ -1,3 +1,4 @@
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { Sora } from "next/font/google";
 import "./globals.css";
 
@@ -10,7 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={sora.className}>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }

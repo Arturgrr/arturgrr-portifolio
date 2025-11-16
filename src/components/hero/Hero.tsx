@@ -21,18 +21,18 @@ export function Hero() {
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
 
-      <div className="relative z-10 grid w-[80vw] max-w-[1100px] grid-cols-1 gap-10 md:[grid-template-columns:3fr_2fr]">
-        <div className="flex flex-col items-start justify-center md:pr-6">
-          <h1 className="text-4xl leading-tight tracking-tight md:text-5xl lg:text-6xl">
+      <div className="relative z-10 grid w-[80vw] max-w-[1100px] grid-cols-1 gap-6 px-4 md:gap-8 md:px-6 lg:grid-cols-2 lg:gap-10 lg:px-0 lg:[grid-template-columns:3fr_2fr]">
+        <div className="flex flex-col items-center justify-center lg:items-start">
+          <h1 className="text-center text-4xl leading-tight tracking-tight md:text-5xl lg:text-left lg:text-5xl">
             Olá 👋 eu sou Artur
           </h1>
-          <p className="mt-3 text-xl md:text-2xl">
+          <p className="mt-3 text-center text-xl md:text-2xl lg:text-left">
             💻 Desenvolvedor{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-emerald-400 bg-clip-text text-transparent">
               Back-End
             </span>
           </p>
-          <div className="mt-5 flex flex-wrap items-center gap-4 opacity-80">
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-4 opacity-80 lg:justify-start">
             <Image
               src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/typescript.svg"
               alt="TypeScript"
@@ -59,10 +59,10 @@ export function Hero() {
             />
           </div>
         </div>
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-center lg:justify-end">
           <div
             className={cn(
-              "h-56 w-56 rounded-2xl bg-white md:h-72 md:w-72",
+              "h-48 w-48 rounded-2xl bg-white sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72",
               "border border-black/5 shadow-2xl",
               "[box-shadow:inset_0_0_40px_rgba(0,0,0,0.08)]",
               "[box-shadow:0_20px_60px_rgba(0,0,0,0.25)]",

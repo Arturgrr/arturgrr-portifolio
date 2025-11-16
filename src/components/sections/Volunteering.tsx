@@ -20,8 +20,15 @@ export function VolunteeringItem({
 }: VolunteeringItemProps) {
   return (
     <div className="flex gap-4">
-      <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white">
-        <Image src={logoUrl} alt={organization} width={32} height={32} />
+      <div className="relative h-12 w-12 overflow-hidden rounded-full border border-black/10 bg-white">
+        <Image
+          src={logoUrl}
+          alt={organization}
+          fill
+          className="object-cover"
+          sizes="48px"
+          priority={false}
+        />
       </div>
       <div className="flex-1">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -29,7 +36,7 @@ export function VolunteeringItem({
           <span className="text-sm text-black/60">{period}</span>
         </div>
         <p className="text-sm font-medium text-black/80">{role}</p>
-        <p className="mt-2 text-sm leading-relaxed text-black/70">
+        <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-black/70">
           {description}
         </p>
       </div>

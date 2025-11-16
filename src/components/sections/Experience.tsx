@@ -29,7 +29,7 @@ export function ExperienceItem({
           <span className="text-sm text-black/60">{period}</span>
         </div>
         <p className="text-sm font-medium text-black/80">{role}</p>
-        <p className="mt-2 text-sm leading-relaxed text-black/70">
+        <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-black/70">
           {description}
         </p>
       </div>

@@ -20,8 +20,15 @@ export function EducationItem({
 }: EducationItemProps) {
   return (
     <div className="flex gap-4">
-      <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white">
-        <Image src={logoUrl} alt={institution} width={32} height={32} />
+      <div className="relative h-12 w-12 overflow-hidden rounded-full border border-black/10 bg-white">
+        <Image
+          src={logoUrl}
+          alt={institution}
+          fill
+          className="object-contain"
+          sizes="48px"
+          priority={false}
+        />
       </div>
       <div className="flex-1">
         <div className="flex flex-wrap items-baseline justify-between gap-2">

@@ -46,17 +46,17 @@ export function NavBar({ active = "sobre" }: NavBarProps) {
         <div className="flex items-center justify-start gap-3">
           <Link
             href="/"
-            className="text-base font-semibold text-black md:text-lg"
+            className="flex items-center text-base font-semibold text-black md:text-lg"
           >
             <Image
               src="/icons/favicon.png"
               alt="Artur Guerra logo"
               width={28}
               height={28}
-              className="inline mr-2 align-middle"
+              className="mr-2"
               priority
             />
-            /arturgrr
+            <span>/arturgrr</span>
           </Link>
         </div>
         <nav className="hidden items-center justify-center gap-2 lg:flex">

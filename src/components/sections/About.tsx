@@ -15,21 +15,10 @@ export function About() {
       </BlurFade>
       <div className="mt-4 space-y-4 text-base leading-relaxed text-black/80 md:mt-6 md:text-lg">
         <BlurFade delay={0.2} inView>
-          <p>
-            Desenvolvedor Back-End com foco em Java, Spring, Go e Node.js. Atuo
-            na criação de APIs, microsserviços e integrações, sempre aplicando
-            boas práticas como DDD e Clean Code para construir soluções
-            escaláveis e de fácil manutenção. Tenho experiência prática em
-            mensageria e filas para processamento assíncrono, garantindo
-            resiliência e performance.
-          </p>
-        </BlurFade>
-        <BlurFade delay={0.3} inView>
-          <p>
-            Comecei no desenvolvimento Back-End aos 14 anos, quando decidi criar
-            plugins para o meu servidor de Minecraft. Desde então, sigo
-            aprofundando conhecimentos e transformando ideias em produtos que
-            geram impacto real.
+          <p className="whitespace-pre-line">
+            {
+              "Desenvolvedor Back-End com paixão por tecnologia e foco na criação de soluções eficientes e de fácil manutenção. Minha experiência principal inclui o desenvolvimento e a evolução de microsserviços com Node.js e NestJS, além da implementação de sistemas de mensageria para processamento assíncrono. Sou proficiente em Java (Spring Boot) e Go, e aplico consistentemente os princípios de DDD e Clean Code para garantir a qualidade do software. Busco uma posição onde eu possa aplicar meu conhecimento diversificado em linguagens e arquiteturas para resolver problemas complexos e impulsionar o crescimento técnico da equipe."
+            }
           </p>
         </BlurFade>
       </div>

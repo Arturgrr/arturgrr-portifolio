@@ -29,7 +29,7 @@ export function Hero() {
           <p className="mt-3 text-xl md:text-2xl">
             💻 Desenvolvedor{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-emerald-400 bg-clip-text text-transparent">
-              Full-Stack
+              Back-End
             </span>
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-4 opacity-80">
@@ -54,18 +54,6 @@ export function Hero() {
             <Image
               src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/spring.svg"
               alt="Spring"
-              width={24}
-              height={24}
-            />
-            <Image
-              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/nextdotjs.svg"
-              alt="Next.js"
-              width={24}
-              height={24}
-            />
-            <Image
-              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg"
-              alt="React"
               width={24}
               height={24}
             />

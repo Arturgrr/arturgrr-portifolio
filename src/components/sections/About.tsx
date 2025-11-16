@@ -1,7 +1,6 @@
 "use client";
 
 import { BlurFade } from "@/components/ui/blur-fade";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export function About() {
   return (
@@ -14,31 +13,26 @@ export function About() {
           Conheça mais sobre mim
         </h2>
       </BlurFade>
-      <TracingBeam className="px-0">
-        <div className="mt-4 space-y-4 text-base leading-relaxed text-black/80 md:mt-6 md:text-lg">
-          <BlurFade delay={0.2} inView>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              ultricies, nunc at placerat efficitur, urna orci malesuada justo,
-              a porttitor lacus sapien ac orci. Integer maximus, neque at
-              iaculis bibendum, nibh dui tristique nibh, id interdum felis sem
-              non arcu. Integer ac accumsan orci. Sed vulputate, orci at
-              elementum ullamcorper, enim turpis sodales nunc, in pulvinar augue
-              velit id lacus.
-            </p>
-          </BlurFade>
-          <BlurFade delay={0.3} inView>
-            <p>
-              Quisque nec magna id magna viverra luctus. Vestibulum ante ipsum
-              primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Aenean rhoncus, ex vitae luctus tempor, metus orci ultrices
-              lectus, eget volutpat odio arcu sed lectus. Cras semper, risus in
-              pulvinar faucibus, eros neque feugiat dolor, ac tempor est quam
-              non risus.
-            </p>
-          </BlurFade>
-        </div>
-      </TracingBeam>
+      <div className="mt-4 space-y-4 text-base leading-relaxed text-black/80 md:mt-6 md:text-lg">
+        <BlurFade delay={0.2} inView>
+          <p>
+            Desenvolvedor Back-End com foco em Java, Spring, Go e Node.js. Atuo
+            na criação de APIs, microsserviços e integrações, sempre aplicando
+            boas práticas como DDD e Clean Code para construir soluções
+            escaláveis e de fácil manutenção. Tenho experiência prática em
+            mensageria e filas para processamento assíncrono, garantindo
+            resiliência e performance.
+          </p>
+        </BlurFade>
+        <BlurFade delay={0.3} inView>
+          <p>
+            Comecei no desenvolvimento Back-End aos 14 anos, quando decidi criar
+            plugins para o meu servidor de Minecraft. Desde então, sigo
+            aprofundando conhecimentos e transformando ideias em produtos que
+            geram impacto real.
+          </p>
+        </BlurFade>
+      </div>
     </section>
   );
 }
